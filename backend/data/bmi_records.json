@@ -1,0 +1,29 @@
+[
+  {
+    "id": "85af4139-c1c3-4e7d-a011-a554e2b68fd3",
+    "user_id": "1629a7c8-7b71-4086-8db3-40674a27974e",
+    "weight": 62,
+    "height": 162,
+    "bmi": 23.62,
+    "classification": "Normal Weight",
+    "created_at": "2026-06-03T06:57:39.451+00:00"
+  },
+  {
+    "id": "439ff899-1d57-4934-bb57-30da9fcc4a4b",
+    "user_id": "1629a7c8-7b71-4086-8db3-40674a27974e",
+    "weight": 70,
+    "height": 170,
+    "bmi": 24.22,
+    "classification": "Normal Weight",
+    "created_at": "2026-06-03T06:34:32.641+00:00"
+  },
+  {
+    "id": "c1501152-ee9c-4d1f-9848-64a554741edc",
+    "user_id": "1629a7c8-7b71-4086-8db3-40674a27974e",
+    "weight": 64,
+    "height": 162,
+    "bmi": 24.39,
+    "classification": "Normal Weight",
+    "created_at": "2026-06-02T09:02:49.539+00:00"
+  }
+]

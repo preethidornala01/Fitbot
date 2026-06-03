@@ -1,0 +1,35 @@
+{
+  "user-default": {
+    "user_id": "user-default",
+    "name": "Test Athlete",
+    "age": 21,
+    "gender": "Female",
+    "height": 175,
+    "weight": 70,
+    "activity_level": "Moderate (3-5 days/week)",
+    "goal": "Weight Loss",
+    "updated_at": "2026-06-02T07:42:28.07+00:00"
+  },
+  "1629a7c8-7b71-4086-8db3-40674a27974e": {
+    "user_id": "1629a7c8-7b71-4086-8db3-40674a27974e",
+    "name": "Dornala Preethi",
+    "age": 21,
+    "gender": "Female",
+    "height": 163,
+    "weight": 63,
+    "activity_level": "Light (1-3 days/week)",
+    "goal": "Weight Loss",
+    "updated_at": "2026-06-02T09:02:26.527+00:00"
+  },
+  "c4aad347-ba8a-468a-9400-f8bf67e086d7": {
+    "user_id": "c4aad347-ba8a-468a-9400-f8bf67e086d7",
+    "name": "Preethi Dornala",
+    "age": 22,
+    "gender": "Female",
+    "height": 165,
+    "weight": 60,
+    "activity_level": "Moderate",
+    "goal": "Maintain Weight",
+    "updated_at": "2026-06-02T09:07:51.759+00:00"
+  }
+}

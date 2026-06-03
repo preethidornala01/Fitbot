@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Overwrite Tailwind defaults to map layout variables to Sage + Peach theme */
+  --color-slate-50: #2D3436; /* Primary Text */
+  --color-slate-100: #2D3436; /* Primary Text */
+  --color-slate-200: #2D3436; /* Primary Text */
+  --color-slate-300: #5E6A6E; /* Secondary Text */
+  --color-slate-400: #5E6A6E; /* Secondary Text */
+  --color-slate-500: #8D9698; /* Muted Text */
+  --color-slate-600: #8D9698; /* Muted Text */
+  --color-slate-700: #EAE5DF; /* Border Color */
+  --color-slate-800: #EAE5DF; /* Border Color */
+  --color-slate-900: #FFFFFF; /* Card Background */
+  --color-slate-950: #FAF8F4; /* Background */
+  
+  --color-emerald-300: #c5d9c0;
+  --color-emerald-400: #A8C3A0; /* Primary Sage Green */
+  --color-emerald-500: #8BA983; /* Dark Sage */
+  --color-emerald-600: #718d6a;
+  --color-emerald-950: #F5F2ED; /* Secondary Background */
+  
+  --color-cyan-300: #f1cca7;
+  --color-cyan-400: #E9B384;    /* Warm Peach Accent */
+  --color-cyan-500: #d09869;
+  --color-cyan-950: #fbf5ee;
+  
+  --color-neon-teal: #A8C3A0;
+  --color-electric-blue: #8BA983;
+}
+
+/* Custom resets & scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 195, 160, 0.2) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 195, 160, 0.25);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8C3A0;
+}
+
+body {
+  background-color: #FAF8F4 !important;
+  background-image: url('./assets/wellness_bg.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  color: #2D3436 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700 !important;
+  color: #2D3436 !important;
+}
+
+/* Solid card styling instead of glassmorphism */
+.glass-panel {
+  background-color: #FFFFFF !important;
+  border: 1px solid #EAE5DF !important;
+  border-radius: 24px !important;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  border-color: #A8C3A0 !important;
+  box-shadow: 0 8px 30px 0 rgba(168, 195, 160, 0.08) !important;
+  transform: translateY(-2px);
+}
+
+/* Sidebar and Header layout rules */
+header {
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #EAE5DF !important;
+}
+
+aside {
+  background-color: #F5F2ED !important; /* Secondary Background */
+  border-right: 1px solid #EAE5DF !important;
+}
+
+/* Fix active navigation states */
+.text-emerald-300 {
+  color: #8BA983 !important;
+}
+.text-emerald-400 {
+  color: #8BA983 !important;
+}
+.bg-emerald-500\/10 {
+  background-color: #FAF8F4 !important;
+}
+.border-emerald-500\/20 {
+  border-color: #EAE5DF !important;
+}
+
+/* Font and text color overrides */
+.text-slate-100 {
+  color: #2D3436 !important;
+}
+.text-slate-200 {
+  color: #2D3436 !important;
+}
+.text-slate-300 {
+  color: #5E6A6E !important;
+}
+.text-slate-400 {
+  color: #5E6A6E !important;
+}
+.text-slate-500 {
+  color: #8D9698 !important;
+}
+.text-white {
+  color: #2D3436 !important;
+}
+
+/* Standard inputs styling */
+input, select, textarea {
+  background-color: #FFFFFF !important;
+  border: 1px solid #EAE5DF !important;
+  color: #2D3436 !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #A8C3A0 !important;
+  outline: none;
+}
+
+/* Buttons - Soft Peach background (#F6D6C9) with Dark text (#2D3436) */
+button.bg-gradient-to-r,
+.bg-gradient-to-tr,
+button.bg-emerald-500,
+button.bg-cyan-500,
+.btn-primary {
+  background: #F6D6C9 !important;
+  color: #2D3436 !important;
+  border: 1px solid #EAE5DF !important;
+  border-radius: 16px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 10px 0 rgba(246, 214, 201, 0.1) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+button.bg-gradient-to-r:hover,
+.bg-gradient-to-tr:hover,
+button.bg-emerald-500:hover,
+button.bg-cyan-500:hover {
+  background: #E9B384 !important; /* Warm Peach hover */
+  color: #2D3436 !important;
+  transform: translateY(-1px);
+}
+
+/* Ensure icons and text inside buttons match readability guidelines */
+button.bg-gradient-to-r *,
+.bg-gradient-to-tr *,
+button.bg-emerald-500 *,
+button.bg-cyan-500 * {
+  color: #2D3436 !important;
+}
+
+/* Custom gradient text and logos */
+.text-gradient-neon {
+  background: linear-gradient(135deg, #8BA983 0%, #E9B384 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #E9B384 0%, #c5d9c0 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Maintain light contrast on clean white items */
+button.bg-white, 
+a.bg-white {
+  background-color: #FFFFFF !important;
+  color: #2D3436 !important;
+  border: 1px solid #EAE5DF !important;
+}
+button.bg-white:hover {
+  background-color: #FAF8F4 !important;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Interactive Background Blobs that follow the mouse with slow, smooth easing */
+.interactive-blob-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -5;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.interactive-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.12;
+  transition: transform 3.5s cubic-bezier(0.1, 0.7, 0.2, 1);
+  will-change: transform;
+}
+
+.blob-sage {
+  width: 600px;
+  height: 600px;
+  background-color: #A8C3A0;
+  top: -10%;
+  left: -10%;
+  transform: translate(calc(var(--mouse-x, 0%) * 0.15), calc(var(--mouse-y, 0%) * 0.15));
+}
+
+.blob-peach {
+  width: 700px;
+  height: 700px;
+  background-color: #F6D6C9;
+  bottom: -20%;
+  right: -10%;
+  transform: translate(calc(var(--mouse-x, 100%) * -0.12), calc(var(--mouse-y, 100%) * -0.12));
+}
+
+.blob-warm {
+  width: 500px;
+  height: 500px;
+  background-color: #E9B384;
+  top: 40%;
+  left: 50%;
+  transform: translate(calc(var(--mouse-x, 50%) * 0.1), calc(var(--mouse-y, 50%) * -0.1));
+}

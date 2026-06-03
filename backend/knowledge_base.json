@@ -1,0 +1,62 @@
+[
+  {
+    "id": "workout_strength_basics",
+    "category": "workout",
+    "title": "Strength Training and Muscle Building",
+    "content": "For muscle growth (hypertrophy), target major muscle groups 2-3 times per week. Focus on compound exercises like Squats, Deadlifts, Bench Press, Overhead Press, and Rows. A typical rep range is 3-4 sets of 8-12 repetitions at 70-80% of your 1-rep max, resting 60-90 seconds between sets. Progressive overload—gradually increasing the weight, reps, or sets over time—is critical for continuous improvement. Always allow 48 hours of recovery for a specific muscle group before training it again."
+  },
+  {
+    "id": "workout_hiit",
+    "category": "workout",
+    "title": "High-Intensity Interval Training (HIIT)",
+    "content": "HIIT is highly effective for burning fat and improving cardiovascular fitness in short sessions. A standard HIIT format is 20-30 seconds of maximum effort (e.g., sprinting, burpees, mountain climbers, kettlebell swings) followed by 40-60 seconds of active recovery or rest. Repeat this cycle for 15-20 minutes. HIIT should only be done 2-3 times per week to prevent overtraining. Always include a 5-minute dynamic warmup and a 5-minute static stretch cooldown."
+  },
+  {
+    "id": "workout_cardio",
+    "category": "workout",
+    "title": "Cardiovascular Endurance Training",
+    "content": "For overall heart health and fat loss, aim for 150 minutes of moderate-intensity aerobic exercise (like brisk walking, cycling, or swimming) or 75 minutes of vigorous-intensity exercise weekly. Keep your heart rate in Zone 2 (60-70% of max heart rate) for sustained fat oxidation and aerobic base building. Max heart rate can be estimated roughly as 220 minus your age. Zone 2 training should feel conversational—meaning you can speak in full sentences while running or cycling."
+  },
+  {
+    "id": "diet_weight_loss",
+    "category": "diet",
+    "title": "Nutrition for Weight Loss and Fat Burning",
+    "content": "To lose weight, you must create a caloric deficit. A safe deficit is 300-500 calories below your Total Daily Energy Expenditure (TDEE), aiming for a gradual weight loss of 0.5 to 1 kg per week. Prioritize high-protein foods (lean chicken, turkey, fish, tofu, egg whites, Greek yogurt) to preserve muscle mass, targeting 1.6 to 2.2 grams of protein per kilogram of body weight. Fill half your plate with non-starchy vegetables (spinach, broccoli, cauliflower) for fiber and volume, and consume slow-digesting complex carbohydrates like oats, quinoa, and sweet potatoes."
+  },
+  {
+    "id": "diet_muscle_gain",
+    "category": "diet",
+    "title": "Nutrition for Muscle Gain (Bulking)",
+    "content": "Muscle building requires a caloric surplus of 200-400 calories above maintenance, combined with heavy resistance training. Keep protein high: 2.0 to 2.4 grams per kilogram of body weight. Carbs are essential to fuel intense workouts and replenish glycogen stores—aim for 4-7 grams per kg. Healthy fats (avocados, olive oil, nuts, seeds) are necessary for hormone production. Eat every 3-4 hours, including a pre-workout meal containing carbs and protein, and a post-workout recovery shake or meal."
+  },
+  {
+    "id": "diet_vegetarian",
+    "category": "diet",
+    "title": "Vegetarian and Vegan Fitness Nutrition",
+    "content": "Plant-based athletes can build muscle and stay fit by combining varied protein sources to get all essential amino acids. Key sources include lentils, chickpeas, black beans, tofu, tempeh, edamame, seitan, quinoa, hemp seeds, and plant-based protein powders (pea, rice, soy blends). Supplementing with Vitamin B12 is essential for vegans, and monitoring Iron, Zinc, and Omega-3 (from chia seeds, flaxseeds, walnuts, or algae oil) is highly recommended. To optimize muscle protein synthesis, aim for 20-30g of protein per meal."
+  },
+  {
+    "id": "bmi_guide",
+    "category": "health",
+    "title": "Understanding BMI (Body Mass Index)",
+    "content": "Body Mass Index (BMI) is a simple screening tool calculated as weight in kg divided by height in meters squared (kg/m²). Standard categories: Underweight (BMI < 18.5), Normal weight (18.5 to 24.9), Overweight (25.0 to 29.9), and Obese (BMI >= 30.0). While useful for population-level health assessments, BMI does not directly measure body fat percentage and can misclassify muscular individuals (athletes) as overweight, or older adults with low muscle mass ('skinny fat') as normal weight. Use BMI alongside waist circumference and body fat scans."
+  },
+  {
+    "id": "health_hydration",
+    "category": "health",
+    "title": "Hydration and Electrolyte Balance",
+    "content": "Water is critical for joint lubrication, nutrient transport, and metabolic function. A general guideline is to drink 3-4 liters of water daily for active men and 2.5-3 liters for active women. During intense workouts lasting over 60 minutes, or in hot weather, replenish lost electrolytes (Sodium, Potassium, Magnesium) by adding an electrolyte tablet to your water or consuming coconut water to prevent muscle cramping and dehydration-induced fatigue."
+  },
+  {
+    "id": "health_sleep",
+    "category": "health",
+    "title": "Sleep and Muscle Recovery",
+    "content": "Muscle growth and repair happen during sleep, specifically during deep sleep phases when Growth Hormone (GH) release peaks. Aim for 7-9 hours of quality sleep per night. Chronically sleeping less than 6 hours per night increases cortisol (stress hormone), reduces muscle protein synthesis, degrades athletic performance, and makes fat loss more difficult. Establish a consistent sleep schedule, limit screens 1 hour before bed, and keep your room cool and dark."
+  },
+  {
+    "id": "health_tips_general",
+    "category": "health",
+    "title": "Daily Health Habits for Consistency",
+    "content": "Long-term fitness relies on small daily habits. Aim for a daily target of 8,000 to 10,000 steps to maintain high Non-Exercise Activity Thermogenesis (NEAT). Incorporate 10 minutes of active stretching daily to maintain mobility and reduce injury risk. Never skip warmups. Practice mindful eating by chewing slowly and stopping when 80% full. Consistency in exercise and nutrition beats intensity; a 20-minute daily walk is better than a single 2-hour workout once a week."
+  }
+]
