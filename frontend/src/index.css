@@ -1,37 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import "tailwindcss";
 
-@theme {
-  --font-heading: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
-  --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
-  
-  /* Overwrite Tailwind defaults to map layout variables to Sage + Peach theme */
-  --color-slate-50: #2D3436; /* Primary Text */
-  --color-slate-100: #2D3436; /* Primary Text */
-  --color-slate-200: #2D3436; /* Primary Text */
-  --color-slate-300: #5E6A6E; /* Secondary Text */
-  --color-slate-400: #5E6A6E; /* Secondary Text */
-  --color-slate-500: #8D9698; /* Muted Text */
-  --color-slate-600: #8D9698; /* Muted Text */
-  --color-slate-700: #EAE5DF; /* Border Color */
-  --color-slate-800: #EAE5DF; /* Border Color */
-  --color-slate-900: #FFFFFF; /* Card Background */
-  --color-slate-950: #FAF8F4; /* Background */
-  
-  --color-emerald-300: #c5d9c0;
-  --color-emerald-400: #A8C3A0; /* Primary Sage Green */
-  --color-emerald-500: #8BA983; /* Dark Sage */
-  --color-emerald-600: #718d6a;
-  --color-emerald-950: #F5F2ED; /* Secondary Background */
-  
-  --color-cyan-300: #f1cca7;
-  --color-cyan-400: #E9B384;    /* Warm Peach Accent */
-  --color-cyan-500: #d09869;
-  --color-cyan-950: #fbf5ee;
-  
-  --color-neon-teal: #A8C3A0;
-  --color-electric-blue: #8BA983;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Custom resets & scrollbars */
 * {
