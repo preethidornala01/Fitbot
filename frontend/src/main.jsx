@@ -6,10 +6,8 @@ import App from './App.jsx'
 // Track mouse movement globally to update CSS variables for soft background color blobs
 if (typeof window !== 'undefined') {
   window.addEventListener('mousemove', (e) => {
-    const x = (e.clientX / window.innerWidth) * 100;
-    const y = (e.clientY / window.innerHeight) * 100;
-    document.documentElement.style.setProperty('--mouse-x', `${x}%`);
-    document.documentElement.style.setProperty('--mouse-y', `${y}%`);
+    document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
   });
 
   // Inject the interactive background blobs container directly into body

@@ -270,7 +270,7 @@ button.bg-white:hover {
   background-color: #A8C3A0;
   top: -10%;
   left: -10%;
-  transform: translate(calc(var(--mouse-x, 0%) * 0.15), calc(var(--mouse-y, 0%) * 0.15));
+  transform: translate(calc(var(--mouse-x, 0px) * 0.1), calc(var(--mouse-y, 0px) * 0.1));
 }
 
 .blob-peach {
@@ -279,7 +279,7 @@ button.bg-white:hover {
   background-color: #F6D6C9;
   bottom: -20%;
   right: -10%;
-  transform: translate(calc(var(--mouse-x, 100%) * -0.12), calc(var(--mouse-y, 100%) * -0.12));
+  transform: translate(calc(var(--mouse-x, 0px) * -0.08), calc(var(--mouse-y, 0px) * -0.08));
 }
 
 .blob-warm {
@@ -288,5 +288,5 @@ button.bg-white:hover {
   background-color: #E9B384;
   top: 40%;
   left: 50%;
-  transform: translate(calc(var(--mouse-x, 50%) * 0.1), calc(var(--mouse-y, 50%) * -0.1));
+  transform: translate(calc(var(--mouse-x, 0px) * 0.05), calc(var(--mouse-y, 0px) * -0.05));
 }
