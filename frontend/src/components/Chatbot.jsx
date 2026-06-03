@@ -15,6 +15,64 @@ export default function Chatbot({ profile, userId }) {
   const [loading, setLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const chatEndRef = useRef(null);
+  const recognitionRef = useRef(null);
+
+  useEffect(() => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const rec = new SpeechRecognition();
+      rec.continuous = false;
+      rec.interimResults = false;
+      rec.lang = 'en-US';
+
+      rec.onstart = () => {
+        setIsListening(true);
+      };
+
+      rec.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        if (transcript) {
+          setInput(transcript);
+        }
+      };
+
+      rec.onerror = (e) => {
+        console.error("Speech recognition error:", e.error);
+        setIsListening(false);
+      };
+
+      rec.onend = () => {
+        setIsListening(false);
+      };
+
+      recognitionRef.current = rec;
+    }
+  }, []);
+
+  const toggleListening = () => {
+    if (!recognitionRef.current) {
+      alert("Speech recognition is not supported in this browser. Please try Chrome, Edge, or Safari.");
+      return;
+    }
+
+    try {
+      if (isListening) {
+        recognitionRef.current.stop();
+        setIsListening(false);
+      } else {
+        recognitionRef.current.start();
+        setIsListening(true);
+      }
+    } catch (err) {
+      console.warn("Speech recognition toggle warning:", err.message);
+      // If already started, just sync state
+      if (err.message && err.message.includes("already started")) {
+        setIsListening(true);
+      } else {
+        setIsListening(false);
+      }
+    }
+  };
 
   // Group flat messages from API into conversational threads
   const parseHistoryIntoThreads = (flatMessages) => {
@@ -395,26 +453,18 @@ export default function Chatbot({ profile, userId }) {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            disabled={loading || isListening}
+            disabled={loading}
           />
           
           {/* Voice Input Button */}
           <button
-            onClick={() => {
-              setIsListening(!isListening);
-              if (!isListening) {
-                setTimeout(() => {
-                  setInput("Generate a protein-rich recovery meal plan");
-                  setIsListening(false);
-                }, 2000);
-              }
-            }}
+            onClick={toggleListening}
             className={`px-3.5 rounded-2xl border transition-all flex items-center justify-center ${
               isListening 
                 ? 'bg-[#FAF8F4] border-[#A8C3A0] text-[#8BA983] animate-pulse' 
                 : 'bg-white border-[#EAE5DF] text-[#5E6A6E] hover:text-[#2D3436]'
             }`}
-            title="Voice Dictation"
+            title={isListening ? "Stop listening" : "Start voice assistant"}
           >
             <Mic size={16} />
           </button>
@@ -422,7 +472,7 @@ export default function Chatbot({ profile, userId }) {
           <button
             onClick={() => handleSendMessage()}
             className="px-4 py-2.5 rounded-2xl bg-[#F6D6C9] hover:bg-[#E9B384] text-[#2D3436] border border-[#EAE5DF] transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            disabled={loading || !input.trim() || isListening}
+            disabled={loading || !input.trim()}
           >
             <Send size={16} className="text-[#2D3436]" />
           </button>
